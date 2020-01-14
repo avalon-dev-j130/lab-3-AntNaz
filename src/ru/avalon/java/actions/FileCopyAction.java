@@ -24,14 +24,9 @@ public class FileCopyAction implements Action {
     
     @Override
     public void run()  {
-       try { Files. }//Files.copy("File.txt", "folderToMove/File.txt")}
-       catch (IOException){
-           
-       }
-        /*
+        Files.copy("File.txt", "folderToMove/File.txt"); /*
          * TODO №2 Реализуйте метод run класса FileCopyAction
-         */
-        //throw new UnsupportedOperationException("Not implemented yet!");
+         */ //throw new UnsupportedOperationException("Not implemented yet!");
     }
 
     /**
