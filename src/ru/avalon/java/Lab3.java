@@ -43,7 +43,7 @@ public class Lab3 extends ConsoleUI<Commands> {
         switch (command) {
             case copy:
                 FileCopyAction fileCopy  = new FileCopyAction();
-                fileCopy.start();
+                Thread threadCopy = new Thread(fileCopy);
                 /*
                  * TODO №6 Обработайте команду copy
                  */

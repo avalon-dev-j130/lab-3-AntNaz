@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.*;
+import java.nio.file.Files;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -18,34 +19,15 @@ public class FileCopyAction implements Action {
      */
     
     //добавленный мной метод.
-    public static void Copy () throws FileNotFoundException, IOException {
-        InputStream in = null;
-        OutputStream out = null;
-        try {
-            in = new FileInputStream("File.txt");
-            out = new FileOutputStream("folderToMove/File.txt");
-            byte[] buffer = new byte[1024];
-            int length;
-            while ((length = in.read(buffer)) > 0) {
-                out.write(buffer, 0, length);
-            }
-            
-        }
-        finally {
-            in.close();
-            out.close();
-        }
-        
-        
-    }
+    
    
     
     @Override
     public void run()  {
-        try {
-            Copy();
-        } catch (IOException ex) {
-        }
+       try { Files. }//Files.copy("File.txt", "folderToMove/File.txt")}
+       catch (IOException){
+           
+       }
         /*
          * TODO №2 Реализуйте метод run класса FileCopyAction
          */
