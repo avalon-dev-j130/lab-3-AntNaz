@@ -47,7 +47,9 @@ public class Lab3 extends ConsoleUI<Commands> {
                 /*
                  * TODO №6 Обработайте команду copy
                  */
+                //FileCopyAction.Copy();
                 break;
+                
             case move:
                 FileMoveAction fileMove = new FileMoveAction();
                 fileMove.start();

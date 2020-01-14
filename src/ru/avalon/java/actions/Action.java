@@ -25,7 +25,7 @@ public interface Action extends Runnable, AutoCloseable {
         /*
          * TODO №1 Реализуйте метод start интерфейса Action.
          */
-        throw new UnsupportedOperationException("Not implemented yet!");
+        //throw new UnsupportedOperationException("Not implemented yet!");
     }
     
 }
