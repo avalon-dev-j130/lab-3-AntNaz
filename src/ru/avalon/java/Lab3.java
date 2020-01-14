@@ -3,6 +3,8 @@ package ru.avalon.java;
 import ru.avalon.java.console.ConsoleUI;
 
 import java.io.IOException;
+import ru.avalon.java.actions.FileCopyAction;
+import ru.avalon.java.actions.FileMoveAction;
 
 /**
  * Лабораторная работа №3
@@ -40,15 +42,28 @@ public class Lab3 extends ConsoleUI<Commands> {
     protected void onCommand(Commands command) throws IOException {
         switch (command) {
             case copy:
+                FileCopyAction fileCopy  = new FileCopyAction();
+                fileCopy.start();
                 /*
                  * TODO №6 Обработайте команду copy
                  */
                 break;
             case move:
+                FileMoveAction fileMove = new FileMoveAction();
+                fileMove.start();
                 /*
                  * TODO №7 Обработайте команду move
                  */
                 break;
+            case delete:
+                break;
+                
+            case add:
+                break;
+                
+            case undo:
+                break;
+                
             case exit:
                 close();
                 break;
