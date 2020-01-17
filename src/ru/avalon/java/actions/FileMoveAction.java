@@ -10,10 +10,14 @@ public class FileMoveAction implements Action {
      */
     @Override
     public void run() {
+        FileCopyAction copy = new FileCopyAction();
+        copy.run();
+        FileDeleteAction delete = new FileDeleteAction();
+        delete.run();
         /*
          * TODO №4 Реализуйте метод run класса FileMoveAction
          */
-        throw new UnsupportedOperationException("Not implemented yet!");
+        //throw new UnsupportedOperationException("Not implemented yet!");
     }
 
     /**

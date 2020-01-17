@@ -6,18 +6,29 @@
 package ru.avalon.java.actions;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
- * @author AntNaz
+ * @author Anton
  */
-public class FileDeleteAction implements Action {
+public class FileAddAction implements Action {
     File file = new File ("File.txt");
-    
     @Override
     public void run() {
-        if (file.exists()) file.delete();
-        else System.out.println("File was not found.");
+        if (file.exists()) {
+            System.out.println("File already exists");
+        }
+        else {try {
+                file.createNewFile();
+             } 
+            catch (IOException ex) {
+            
+            }
+        }
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
