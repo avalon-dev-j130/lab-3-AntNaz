@@ -17,8 +17,8 @@ public interface Action extends Runnable, AutoCloseable {
         
         //мой код
         
-        
-        
+        Thread thread = new Thread(this);
+        thread.start();
         
         //конец моего кода
         

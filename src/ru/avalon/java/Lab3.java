@@ -46,18 +46,15 @@ public class Lab3 extends ConsoleUI<Commands> {
         switch (command) {
             case copy:
                 FileCopyAction fileCopy  = new FileCopyAction();
-                Thread threadCopy = new Thread(fileCopy);
-                threadCopy.start();
+                fileCopy.start();
                 /*
                  * TODO №6 Обработайте команду copy
                  */
-               
                 break;
                 
             case move:
                 FileMoveAction fileMove = new FileMoveAction();
-                Thread threadMove = new Thread(fileMove);
-                threadMove.start();
+                fileMove.start();
                 /*
                  * TODO №7 Обработайте команду move
                  */
@@ -65,14 +62,12 @@ public class Lab3 extends ConsoleUI<Commands> {
                 
             case delete:
                 FileDeleteAction fileDelete = new FileDeleteAction();
-                Thread threadDelete = new Thread(fileDelete);
-                threadDelete.start();
+                fileDelete.start();
                 break;
                 
             case add:
                 FileAddAction fileadd = new FileAddAction();
-                Thread threadadd = new Thread(fileadd);
-                threadadd.start();
+                fileadd.start();
                 break;
             
             case exit:
